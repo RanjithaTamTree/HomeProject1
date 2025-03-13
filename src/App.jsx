@@ -25,12 +25,10 @@ function App() {
   const deleteTask = (id) => setTasks(tasks.filter((task) => task.id !== id));
 
   return (
-    <div className="min-h-screen bg-gray-100 flex items-center justify-center p-10">
-      <div className="bg-white shadow-lg p-6 rounded-lg w-full max-w-2xl mx-12">
-        <h1 className="text-2xl font-extrabold text-[#f39c12] text-center mb-10">TODO LIST</h1>
-        <TodoForm addTask={addTask} />
-        <TodoList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
-      </div>
+    <div className="min-h-screen bg-gray-100 p-4">
+      <h1 className="text-2xl font-bold text-center mb-4">Todo List</h1>
+      <TodoForm addTask={addTask} />
+      <TodoList tasks={tasks} updateTask={updateTask} deleteTask={deleteTask} />
     </div>
   );
 }
